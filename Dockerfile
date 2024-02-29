@@ -6,6 +6,8 @@ RUN pip3 install --upgrade pip
 RUN pip3 install pipenv
 
 WORKDIR /usr/src/app
+RUN useradd jenkins -d /usr/src/app && echo "jenkins:jenkins" | chpasswd
+RUN chown -R jenkins:jenkins /usr/src/app
 
 COPY . .
 
