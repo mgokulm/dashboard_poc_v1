@@ -6,6 +6,7 @@ pipeline {
                 echo 'gkl in stage - Clone repo'
                 checkout scm
             }
+        }
         stage('Prepare') {
             steps {
                 echo 'gkl in stage - Prepare'
