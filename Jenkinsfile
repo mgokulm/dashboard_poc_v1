@@ -7,17 +7,5 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Prepare') {
-            steps {
-                echo 'gkl in stage - Prepare'
-                sh 'pipenv install'
-            }
-        }
-        stage('Run image') {
-            steps {
-                echo 'gkl in stage - Run image'
-                sh 'docker run -p 8501:8501 streamlit'
-            }
-        }
     }
 }
