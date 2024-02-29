@@ -12,5 +12,3 @@ RUN chown -R jenkins:jenkins /usr/src/app
 COPY . .
 
 RUN pip3 install -r requirements.txt
-
-EXPOSE 8501
