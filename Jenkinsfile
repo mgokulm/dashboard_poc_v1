@@ -7,5 +7,11 @@ pipeline {
                 checkout scm
             }
         }
+        stage('Run') {
+            steps {
+                echo 'gkl in stage - Run'
+                sh 'streamlit run dashboard.py'
+            }
+        }
     }
 }
