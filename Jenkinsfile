@@ -10,7 +10,7 @@ pipeline {
         stage('Run') {
             steps {
                 echo 'gkl in stage - Run'
-                sh 'streamlit run dashboard.py'
+                sh 'streamlit run dashboard.py --server.port 8501'
             }
         }
     }
